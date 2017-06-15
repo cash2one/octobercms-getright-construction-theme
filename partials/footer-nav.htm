@@ -1,0 +1,17 @@
+{% import _self as nav %}
+
+{% macro render_menu(items) %}
+{% import _self as nav %}
+
+{% for item in items %}
+<li class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }}">
+    <a href="{{ item.url }}">{{ item.title }}</a>
+</li>
+{% endfor %}
+{% endmacro %}
+
+{% if mainMenu.menuItems %}
+<ul class="nav navbar-nav">
+    {{ nav.render_menu(mainMenu.menuItems) }}
+</ul>
+{% endif %}

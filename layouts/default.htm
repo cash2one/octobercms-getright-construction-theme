@@ -1,0 +1,18 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    {% partial 'head' %}
+    <body>
+        {% partial 'nav' %}
+
+        <div id="layout-content">
+            {% page %}
+        </div>
+
+
+        {% partial 'js/scripts' %}
+
+        {% scripts %}
+    </body>
+</html>

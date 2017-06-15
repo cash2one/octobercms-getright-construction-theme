@@ -1,0 +1,38 @@
+name: 'Main menu'
+items:
+    -
+        title: Home
+        type: url
+        url: /
+        code: main-menu
+        viewBag:
+            isHidden: '0'
+            cssClass: home
+            isExternal: '0'
+    -
+        title: Services
+        type: url
+        url: '#services'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: services
+            isExternal: '0'
+    -
+        title: About
+        type: url
+        url: '#about'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: about
+            isExternal: '0'
+    -
+        title: Contact
+        type: url
+        url: '#contact'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: contact
+            isExternal: '0'

@@ -1,0 +1,30 @@
+name: GetRight-Construction-Theme
+author: getRight
+description: getRight Construction Theme
+homepage: 'https://www.getright.nl'
+code: GetRight-Construction
+require:
+    - GetRight.Slider
+    - GetRight.Services
+    - GetRight.ProgressCircles
+    - GetRight.Projects
+    - GetRight.Contact
+    - RainLab.Pages
+    - Rahman.Faker
+
+form:
+    fields:
+        logo:
+            label: Logo
+            type: mediafinder
+            mode: image
+        facebook_url:
+            label: URL Facebook
+            type: text
+        twitter_url:
+            label: URL Twitter
+            type: text
+        linkedin_url:
+            label: URL LinkedIn
+            type: text
+

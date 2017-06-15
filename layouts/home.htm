@@ -1,0 +1,123 @@
+description = "Homepage layout"
+[SlideShow]
+[ServiceBlocks]
+[staticPage]
+[staticMenu mainMenu]
+code = 'main-menu'
+[CirclesList]
+[RecentProjects]
+[ContactForm]
+==
+<!DOCTYPE html>
+<html>
+    {% partial 'head' %}
+    <body>
+        {% partial 'nav' %}
+
+        <section class="slider">
+            {% component 'SlideShow' %}
+        </section>
+
+        <section class="services" style="background-image:url('{{ 'assets/images/background-services.png'|theme }}');">
+            {% component 'ServiceBlocks' %}
+        </section>
+
+        <section class="usps" id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h1 class="section-title">{text name="serviceTitle" label="Service Title" tab="Service"}Services{/text}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p class="section-text">
+                            {textarea name="serviceText" label="Service Text" tab="Service"}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pharetra ipsum consequat feugiat. Phasellus eu orci malesuada lectus lacinia suscipit facilisis ut felis. In id mollis leo. Integer velit felis, rhoncus sit amet turpis non, gravida accumsan mi. Pellentesque efficitur consectetur metus. Integer et urna id nunc aliquam porttitor. Vivamus vel mauris aliquam, suscipit sapien non, pellentesque risus. Cras sit amet ultricies neque, id eleifend sapien. Aenean vel risus ac ex ultricies pulvinar non sed felis. Vestibulum orci augue, commodo a imperdiet a, dictum nec purus. Ut quis est augue. Aliquam tincidunt condimentum rhoncus. Donec at ultricies ligula, eget finibus lacus. Nam faucibus molestie tellus, id ultricies diam. Proin vehicula cursus mi, quis finibus arcu pellentesque sit amet.
+                            {/textarea}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    {% component 'CirclesList' %}
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="section-title text-center">{text name="projectTitle" label="Project Title" tab="Projects"}Recent projects{/text}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    {% component 'RecentProjects' %}
+                </div>
+            </div>
+
+        </section>
+
+        <section class="about" id="about" style="background-image:url('{{ 'assets/images/background-services.png'|theme }}');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="section-title text-center">{text name="aboutTitle" label="About Title" tab="About"}About{/text}</h1>
+                        <p>
+                            {textarea name="aboutText" label="About Text" tab="About"}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pharetra ipsum consequat feugiat. Phasellus eu orci malesuada lectus lacinia suscipit facilisis ut felis. In id mollis leo. Integer velit felis, rhoncus sit amet turpis non, gravida accumsan mi. Pellentesque efficitur consectetur metus. Integer et urna id nunc aliquam porttitor. Vivamus vel mauris aliquam, suscipit sapien non, pellentesque risus. Cras sit amet ultricies neque, id eleifend sapien. Aenean vel risus ac ex ultricies pulvinar non sed felis. Vestibulum orci augue, commodo a imperdiet a, dictum nec purus. Ut quis est augue. Aliquam tincidunt condimentum rhoncus. Donec at ultricies ligula, eget finibus lacus. Nam faucibus molestie tellus, id ultricies diam. Proin vehicula cursus mi, quis finibus arcu pellentesque sit amet.
+                            {/textarea}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" style="background-image: url('{{ 'assets/images/background-construction.png'|theme }}');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="section-title text-center">{text name="contactTitle" label="Contact Title" tab="Contact"}Contact{/text}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 padding-right-sm-50">
+                        <h4 class="send-message">{text name="contactFormTitle" label="Contact Form Title" tab="Contact"}Send us message{/text}</h4>
+                        {% component 'ContactForm' %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 padding-left-sm-50">
+                        <div class="row">
+                            <div class="adress contact-info">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <div class="text">
+                                    <p>{text name="addressTitle" label="Address Title" tab="Company Information"}Address{/text}</p>
+                                    <p>{text name="address" label="Address" tab="Company Information"}Your address{/text}</p>
+                                </div>
+                            </div>
+                            <div class="adress contact-info">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <div class="text">
+                                    <p>{text name="emailTitle" label="E-mail Title" tab="Company Information"}E-mail{/text}</p>
+                                    <p>{text name="email" label="E-mail" tab="Company Information"}Your e-mail{/text}</p>
+                                </div>
+                            </div>
+                            <div class="adress contact-info">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <div class="text">
+                                    <p>{text name="phoneTitle" label="Phone Title" tab="Company Information"}Phone{/text}</p>
+                                    <p>{text name="phone" label="Phone" tab="Company Information"}Your phone{/text}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% partial 'footer' %}
+
+        {% partial 'js/scripts' %}
+
+        {% scripts %}
+    </body>
+</html>

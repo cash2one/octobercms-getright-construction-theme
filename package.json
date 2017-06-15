@@ -1,0 +1,15 @@
+{
+  "name": "kleine-betonpomp",
+  "version": "1.0.0",
+  "description": "Blank scaffold for [OctoberCMS](https://github.com/octobercms/october) which includes [Twitter Bootstrap](http://getbootstrap.com/), [jQuery](https://jquery.com/) and [Font Awesome](https://fortawesome.github.io/Font-Awesome/). Built using [Less](http://lesscss.org/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "getRight",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-elixir": "^5.0.0",
+    "laravel-elixir-livereload": "^1.1.6"
+  }
+}

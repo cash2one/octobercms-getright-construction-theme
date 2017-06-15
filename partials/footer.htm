@@ -1,0 +1,24 @@
+<section class="footer">
+    <div class="container">
+        <div class="row navigation">
+            <div class="col-xs-2">
+                {% if this.theme.logo %}
+                    <img src="{{ 'assets/images/logo.png'|theme }}" class="img-responsive"/>
+                {% else %}
+                    <span style="color: #fff;">Your logo</span>
+                {% endif %}
+            </div>
+            <div class="col-xs-8 text-center">
+                {% partial 'footer-nav' %}
+            </div>
+            <div class="col-xs-2 text-right">
+                {% partial 'socials' %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="copyright"><a href="#">OctoberCMS Theme</a> by: <a href="https://www.getright.nl">getRight.nl</a></span>
+            </div>
+        </div>
+    </div>
+</section>

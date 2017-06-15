@@ -1,0 +1,24 @@
+.Roboto(@weight: 400) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: @weight;
+}
+
+.scaleY(@factor){
+    -webkit-transform: scaleY(@factor);
+    -moz-transform: scaleY(@factor);
+    -ms-transform: scaleY(@factor);
+    -o-transform: scaleY(@factor);
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+.Montserrat(@weight: 400) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: @weight;
+}
