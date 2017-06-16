@@ -2,7 +2,7 @@ name: GetRight-Construction-Theme
 author: getRight
 description: getRight Construction Theme
 homepage: 'https://www.getright.nl'
-code: GetRight-Construction
+code: getright-construction
 require:
     - GetRight.Slider
     - GetRight.Services
@@ -21,10 +21,34 @@ form:
         facebook_url:
             label: URL Facebook
             type: text
+            default: http://www.facebook.com
         twitter_url:
             label: URL Twitter
             type: text
+            default: http://www.twitter.com
         linkedin_url:
             label: URL LinkedIn
             type: text
+            default: http://www.linkedin.com
+        phone:
+            label: Phone
+            type: text
+            default: 012345678
+        email:
+            label: Email
+            type: text
+            default: example@example.com
+        address:
+            label: Address
+            type: text
+            default: Your Address
+        topbar_phone_text:
+            label: Topbar phone text
+            type: text
+            default: Contact us:
+        topbar_email_text:
+            label: Topbar email text
+            type: text
+            default: E-mail:
+
 

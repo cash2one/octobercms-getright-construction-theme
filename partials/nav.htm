@@ -26,7 +26,7 @@
             <span class="vertical">
                 <a class="navbar-brand" href="{{ 'home'|page }}">
                     {% if this.theme.logo %}
-                        <img src="{{ this.theme.logo }}" class="img-responsive"/>
+                        <img src="{{ this.theme.logo|media }}" class="img-responsive"/>
                     {% else %}
                         <span style="color: #fff;">Your logo</span>
                     {% endif %}
@@ -37,8 +37,8 @@
             <div id="topbar" class="hidden-xs topbar">
                 <div class="wrapper">
                     <div class="left-topbar">
-                        <span class="top-text"><span class="text-before-topbar">Neem contact op:</span> +31 6 51 42 38 59</span>
-                        <span class="top-text hidden-md hidden-sm"><span class="text-before-topbar">E-mail</span> info@kleine-betonpomp.nl</span>
+                        <span class="top-text"><span class="text-before-topbar">{{ this.theme.topbar_phone_text }}</span> {{ this.theme.phone }}</span>
+                        <span class="top-text hidden-md hidden-sm"><span class="text-before-topbar">{{ this.theme.topbar_email_text }}</span> {{ this.theme.email }}</span>
                     </div>
                     <div class="right-topbar">
                         {% partial 'socials' %}
