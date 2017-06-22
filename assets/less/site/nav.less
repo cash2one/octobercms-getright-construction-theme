@@ -20,12 +20,14 @@
 }
 
 .navbar-brand{
-    height: 125px;
-    line-height: 125px;
+    height: 110px;
+    line-height: 0px;
 
     @media (min-width: @screen-sm-min){
         height:125px;
         padding:0;
+        height: 125px;
+        line-height: 125px;
     }
 
     & > img{
@@ -82,7 +84,11 @@
 }
 
 .navbars{
-    padding-left: 300px;
+    padding-left: 0px;
+
+    @media (min-width: @screen-sm-min){
+        padding-left: 300px;
+    }
 }
 
 .topbar{
@@ -115,6 +121,7 @@
 }
 
 .navbar-default{
+    margin-bottom: 0;
 
     .navbar-nav{
         @media (min-width: 768px) {
@@ -146,6 +153,10 @@
             &:first-child{
                 a{
                     border-left:1px solid #363636;
+
+                    @media (max-width: @screen-sm-min){
+                        border-left:none;
+                    }
                 }
             }
 
@@ -156,6 +167,11 @@
                 color :#fff;
                 font-size: 18px;
                 .Roboto(700);
+
+                @media (max-width: @screen-sm-min){
+                    color: #1fa7e2;
+                    border-right:none;
+                }
 
                 &:hover{
                     color: @orange-color;
